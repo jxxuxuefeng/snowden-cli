@@ -10,7 +10,7 @@ class Hello extends Component {
     render() {
         return (
             <div>
-                <h3>ni hao </h3>
+                <h3>Hell333o world</h3>
             </div>
         );
     }
