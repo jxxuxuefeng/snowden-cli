@@ -14,15 +14,17 @@ module.exports = {
         'sourceType': 'module'
     } ,
     'plugins': [
-        'react'
+        'react',
+        'prettier'
     ] ,
     'root': true ,
     'rules': {
+        'prettier/prettier': 'error',
         'no-unused-vars': [ 'error' , {'vars': 'all' , 'args': 'after-used'} ] ,
         'react/react-in-jsx-scope': 'error' ,
         'react/jsx-uses-react': 'error' ,
         'react/jsx-uses-vars': 'error' ,
-        'react/jsx-no-undef': 'error'
+        'react/jsx-no-undef': 'error',
     } ,
     'settings': {
         'react': {
@@ -31,5 +33,6 @@ module.exports = {
     } ,
     'globals': {
         $: false
-    }
+    },
+    'extends': ['prettier']
 };
