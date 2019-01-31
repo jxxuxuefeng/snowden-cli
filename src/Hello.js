@@ -5,7 +5,12 @@ import Errors from './ErrorS';
 class Hello extends Component {
     componentDidMount() {
         Errors()
+        
+        const xx = "22";
+        console.log(xx,'xx');
     }
+    
+    
     
     render() {
         return (

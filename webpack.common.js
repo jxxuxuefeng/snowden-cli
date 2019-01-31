@@ -19,7 +19,8 @@ module.exports = {
             } ,
             {
                 test: /\.(js|jsx)$/ ,
-                use: [ 'babel-loader' ] ,
+                use: [ 'babel-loader' , 'eslint-loader' ] ,
+                include: [ path.resolve(__dirname , 'src') ] ,
                 exclude: /node_modules/
             } , {
                 test: /\.(png|svg|jpg|gif)$/ ,
@@ -33,7 +34,7 @@ module.exports = {
             template: path.resolve('./template/dev.html') ,
             filename: 'index.html' ,
         }) ,
-    ],
+    ] ,
     optimization: {
         splitChunks: {
             chunks: 'all'
