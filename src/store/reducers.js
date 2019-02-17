@@ -1,5 +1,5 @@
 const initState = {
-    inputValue: '你好'
+    inputValue: '你好5'
 };
 export default function(state = initState, action) {
     if (action.type === 'CHANGE_INPUT_VALUE') {
