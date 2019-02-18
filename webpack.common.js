@@ -31,7 +31,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: '吊炸天',
+            title: 'TodoList',
             template: path.resolve('./template/dev.html'),
             filename: 'index.html'
         })
