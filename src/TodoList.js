@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import { Input, List, message } from 'antd';
 import './TodoList.less';
+import axios from 'axios';
 
 class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            dataList: ['测试数据一', '测试数据二', '测试数据三'],
+            dataList: [],
             inputValue: ''
         };
+    }
+
+    componentDidMount() {
+        axios.get('/data').then(res => {
+            const dataList = res.data;
+            this.setState({ dataList });
+        });
     }
 
     onChangeInputValue = e => {
@@ -49,7 +57,7 @@ class TodoList extends Component {
                     renderItem={(item, index) => (
                         <List.Item>
                             <div className="hidden w100">
-                                <div className="fl">{item}</div>
+                                <div className="fl">{item.name}</div>
                                 <div
                                     className="item"
                                     onClick={() => this.onDeleteItem(index)}

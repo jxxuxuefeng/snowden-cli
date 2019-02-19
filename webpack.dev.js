@@ -11,7 +11,17 @@ module.exports = merge(common, {
         host: 'localhost',
         port: 8080,
         hot: true,
-        noInfo: true
+        noInfo: true,
+        proxy: [
+            {
+                context: [`/*`],
+                target: 'http://localhost:9093',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/$': ''
+                }
+            }
+        ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
