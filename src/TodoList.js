@@ -29,8 +29,14 @@ class TodoList extends Component {
         if (!e.target.value) {
             return message.error('请输入内容');
         }
+        console.log(e.target.value, 'e.target.value');
+        let newValue = [
+            {
+                name: e.target.value
+            }
+        ];
         this.setState({
-            dataList: [...this.state.dataList, e.target.value],
+            dataList: [...this.state.dataList, ...newValue],
             inputValue: ''
         });
     };
