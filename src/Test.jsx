@@ -15,12 +15,16 @@ class Test extends Component {
     };
 
     render() {
+<<<<<<< HEAD
         const { inputValue } = this.state;
         return (
             <div>
                 <input value={inputValue} onChange={this.onChangeInputValue} />
             </div>
         );
+=======
+        return <div>test33K</div>;
+>>>>>>> 7e2f5e0815831901ec8895577ba5b6911258b135
     }
 }
 
